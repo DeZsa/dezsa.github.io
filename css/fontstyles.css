@@ -1,0 +1,58 @@
+
+/* Fonts */ 
+
+@font-face {
+	font-family: 'Cinzel';
+	src: url('fonts/Cinzel-Black.ttf'); 
+	src: 
+		local('Cinzel Black'),
+		local('Cinzel-Black'),
+		url('fonts/Cinzel-Black.ttf') 
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Ek Mukta';
+	src: url('fonts/EkMukta-ExtraLight.ttf'); 
+	src: 
+		local('Ek Mukta ExtraLight'),
+        local('Ek-Mukta-ExtraLight'),
+		url('fonts/EkMukta-ExtraLight.ttf') 
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('fonts/PlayfairDisplay-Regular.ttf'); 
+	src: 
+		local('Playfair Display'),
+		local('Playfair-Display'),
+		url('fonts/PlayfairDisplay-Regular.ttf') 
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('fonts/PlayfairDisplay-Italic.ttf'); 
+	src: 
+		local('Playfair Display'),
+		local('Playfair-Display'),
+		url('fonts/PlayfairDisplay-Italic.ttf') 
+		format('truetype');
+    font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'Bebas Neue Thin';
+	src: url('fonts/BebasNeue Thin.otf'); 
+	src: 
+		local('BebasNeue Thin'),
+		local('BebasNeue-Thin'),
+		url('fonts/BebasNeue Thin.otf') 
+		format('opentype');
+}
+
+body {
+    font-family: 'Ek Mukta', sans-serif;
+}
