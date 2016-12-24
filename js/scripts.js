@@ -6,15 +6,28 @@ Date: 8/22/2016
 */
 $(document).ready(function() {
 	
-var navContent = $('.nav-content');
+var $navContent = $('.nav-content');
+var $width = $(window).width();
+var $loadScreen = $('#load-screen');
+var $body = $('body');
+var $content = $('.content, .about-name');
 
-setTimeout(function(){
-    $('body').addClass('load');
-    $('.content, .about-name').delay(2000).fadeIn(1000);
+if ($width > 650 ) {
+    setTimeout(function(){
+        $body.addClass('load');
+        $content.delay(2000).fadeIn(1000);
 	}, 2000);
+} else {
+    $content.fadeIn(700);
+}
+    
+if ($loadScreen.css('display') == 'none' || $loadScreen.is(':hidden')) {
+    $loadScreen.css('display', 'none');
+    $body.addClass('load');
+}
     
 $('aside').click( function() {
-    if ( width > 600 ) {
+    if ( $width > 600 ) {
     $(this).children('.sk-text').toggle();
     $(this).addClass('stop');
     }
@@ -65,11 +78,11 @@ $(function() {
 });
 
 $('a[href*="#"]:not([href="#"])').click(function() {
-  if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    if(target.length) {
-      $('body').animate({
+    if (target.length) {
+      $body.animate({
         scrollTop: target.offset().top
       }, 1000);
       return false;
