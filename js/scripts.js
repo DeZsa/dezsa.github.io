@@ -2,7 +2,7 @@
 De'Zsa Smith
 http://dezsasmith.com/
 
-Date: 8/22/2016
+Date: 2/11/2017
 */
 $(document).ready(function () {
     for (var i = 0; i < 10; i++) {
@@ -40,4 +40,32 @@ $(document).ready(function () {
     'images/dlog.png'
     , 'images/loogo.png'
   ]);
+    
+   /* 
+  span transition effects -
+  Courtesy of Roko C. Buljan
+  http://stackoverflow.com/a/20696329
+  */
+
+    $("[data-words]").attr("data-words", function(i, d) {
+      var $self = $(this),
+        $words = d.split("|"),
+        tot = $words.length,
+        c = 0;
+
+      for (var i = 0; i < tot; i++) $self.append($('<span/>', {
+        text: $words[i]
+      }));
+
+      $words = $self.find("span").hide();
+
+      (function loop() {
+        $self.animate({
+          width: $words.eq(c).width()
+        });
+        $words.stop().fadeOut(1000).eq(c).fadeIn(2000).delay(2500).show(0, loop);
+        c = ++c % tot;
+      }());
+
+    });
 });
