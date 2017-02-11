@@ -4,7 +4,6 @@ http://dezsasmith.com/
 
 Date: 2/11/2017
 */
-$(document).ready(function () {
     for (var i = 0; i < 10; i++) {
         $(".block-container").append("<div class='blocks'></div>");
     }
@@ -29,11 +28,6 @@ $(document).ready(function () {
             }
         }
     });
-    
-$('.more').on('click', function() {
-    $('.col-group').slideToggle();
-    $('.main-group').slideToggle();
-});
 
     function preload(arrayOfImages) {
         $(arrayOfImages).each(function () {
@@ -72,4 +66,8 @@ $('.more').on('click', function() {
       }());
 
     });
+    
+$('.more').on('click', function() {
+    $('.col-group').slideToggle();
+    $('.main-group').slideToggle();
 });
