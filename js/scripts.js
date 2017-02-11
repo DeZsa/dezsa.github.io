@@ -30,6 +30,10 @@ $(document).ready(function () {
         }
     });
     
+$('.more').on('click', function() {
+    $('.col-group').slideToggle();
+    $('.main-group').slideToggle();
+});
 
     function preload(arrayOfImages) {
         $(arrayOfImages).each(function () {
