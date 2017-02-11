@@ -472,4 +472,7 @@ h1 {
         float: none;
         text-align: center;
     }
+    .intro p {
+        font-size: 1em;
+    }
 }
